@@ -1,0 +1,22 @@
+.card {
+    margin: 1rem;
+    border: 1px solid #000;
+    padding: 1.5rem;
+    max-width: 200px;
+}
+
+.flag {
+    max-width: 150px;
+}
+
+.container {
+    min-height: 100vh;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: start;
+    align-items: flex-start;
+    text-align: center;
+    flex-wrap: wrap;
+}

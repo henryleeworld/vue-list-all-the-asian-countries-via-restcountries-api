@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta property="og:title" content="通過 RESTCountries 應用程式介面列出所有亞洲國家" />
+        <meta property="og:description" content="亞洲為世界七大洲面積最大、人口最多的一洲。由於亞洲地域廣大、民族眾多，文化的多樣性很強，世界各地的人們都積極前往來一探究竟。" />
+        <meta property="og:locale" content="zh_TW" />
+        <meta property="og:type" content="website" />
+        <link rel="stylesheet" href="css/asian-countries.css" />
+        <title>通過 RESTCountries 應用程式介面列出所有亞洲國家</title>
+    </head>
+    <body>
+        <div id="app">
+            <section class="container">
+                <div v-if="countries" v-for="country of countries" :key="country.id" :country="country">
+                    <article class="card">
+                        <img :src="country.flag" :alt="country.name" class="flag" />
+                        <h2 class="native-name">{{ country.nativeName }}</h2>
+                        <p class="subregion">{{ country.subregion }}</p>
+                    </article>
+                </div>
+            </section>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js" integrity="sha512-QJsj3afWlCpnQ60XzzYE8Jb3IgHIK1BcGZox9rUSmRRq3Ocz9vQ1yR80eX2/b9jfx/UuT5zYWNdrM8Te/eCMhQ==" crossorigin="anonymous" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js" integrity="sha512-VZ6m0F78+yo3sbu48gElK4irv2dzPoep8oo9LEjxviigcnnnNvnTOJRSrIhuFk68FMLOpiNz+T77nNY89rnWDg==" crossorigin="anonymous" defer></script>
+        <script src="js/asian-countries.js" defer></script>
+    </body>
+</html>
